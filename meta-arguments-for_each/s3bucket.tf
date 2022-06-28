@@ -12,11 +12,15 @@ resource "aws_s3_bucket" "mys3bucket" {
   }
 
   bucket = "${each.key}-${each.value}"
-  acl    = "private"
-
+  
   tags = {
     Environment = each.key
     bucketname  = "${each.key}-${each.value}"
     eachvalue   = each.value
   }
+}
+
+resource "aws_s3_bucket_acl" "example_bucket_acl" {
+  bucket = aws_s3_bucket.mys3bucket.id
+  acl    = "private"
 }
