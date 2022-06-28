@@ -5,6 +5,6 @@ resource "aws_instance" "web" {
   count         = 5
   tags = {
     #"Name" = "web"
-    "Name" = "web-${count.index}"
+    "Name" = "web-0${count.index}"
   }
 }
