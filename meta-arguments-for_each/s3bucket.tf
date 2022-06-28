@@ -21,6 +21,13 @@ resource "aws_s3_bucket" "mys3bucket" {
 }
 
 resource "aws_s3_bucket_acl" "example_bucket_acl" {
-  bucket = aws_s3_bucket.mys3bucket.id
+  for_each = {
+    dev  = "my-dapp-bucket"
+    qa   = "my-qapp-bucket"
+    stag = "my-sapp-bucket"
+    prod = "my-papp-bucket"
+  }
+
+  bucket = "${each.key}-${each.value}"
   acl    = "private"
 }
