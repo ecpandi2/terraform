@@ -5,6 +5,10 @@ resource "aws_instance" "web" {
   tags = {
     "Name" = "web-3"
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dca64ab8500f4daa493fab2e651332e1f95a30f5
   lifecycle {
     ignore_changes = [
       # Ignore changes to tags, e.g. because a management agent
@@ -12,4 +16,8 @@ resource "aws_instance" "web" {
       tags,
     ]
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> dca64ab8500f4daa493fab2e651332e1f95a30f5
