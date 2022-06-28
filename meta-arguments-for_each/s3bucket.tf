@@ -21,6 +21,6 @@ resource "aws_s3_bucket" "mys3bucket" {
 }
 
 resource "aws_s3_bucket_acl" "example_bucket_acl" {
-  bucket = aws_s3_bucket.mys3bucket-${each.key}-${each.value}
+  bucket = aws_s3_bucket.mys3bucket.id
   acl    = "private"
 }
