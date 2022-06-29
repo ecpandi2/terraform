@@ -11,12 +11,21 @@ terraform {
   backend "s3" {
     bucket = "terraform-pandiyan"
     key    = "dev/terraform.tfstate"
+<<<<<<< HEAD
     region = "us-east-1"
     /*
     # Enable during Step-09     
     # For State Locking
     dynamodb_table = "terraform-dev-state-table"    
 */
+=======
+    region = "us-east-1" 
+
+    # Enable during Step-09     
+    # For State Locking
+    dynamodb_table = "terraform-dev-state-table"    
+   
+>>>>>>> 08db773c142a829d4f7f7e8355b764b37a1c92e5
   }
 }
 
