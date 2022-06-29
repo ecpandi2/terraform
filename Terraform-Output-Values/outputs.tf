@@ -20,5 +20,5 @@ output "ec2_security_groups" {
 output "ec2_publicdns" {
   description = "Public DNS URL of an EC2 Instance"
   value = "http://${aws_instance.my-ec2-vm.public_dns}"
-  #sensitive = true   #Uncomment it during step-04 execution
+  sensitive = true   #Uncomment it during step-04 execution
 }
