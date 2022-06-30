@@ -11,3 +11,14 @@ resource "aws_instance" "my-ec2-vm-new" {
     "target" = "Target-Test-1"
   }
 }
+
+
+# Enable during step-08
+# New VM
+resource "aws_instance" "my-demo-vm" {
+  ami           = data.aws_ami.amzlinux.id 
+  instance_type = var.instance_type
+  tags = {
+    "Name" = "demo-vm1"
+  }
+}
