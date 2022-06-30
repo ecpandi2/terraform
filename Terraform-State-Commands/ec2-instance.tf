@@ -1,5 +1,5 @@
 # Create EC2 Instance - Amazon Linux
-resource "aws_instance" "my-ec2-vm" {
+resource "aws_instance" "my-ec2-vm-new" {
   ami                    = data.aws_ami.amzlinux.id
   instance_type          = var.instance_type
   key_name               = "terraform-key"
