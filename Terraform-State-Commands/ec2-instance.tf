@@ -7,5 +7,6 @@ resource "aws_instance" "my-ec2-vm" {
   vpc_security_group_ids = [aws_security_group.vpc-ssh.id, aws_security_group.vpc-web.id]
   tags = {
     "Name" = "amz-linux-vm"
+    "demotag" = "refreshtest"
   }
 }
