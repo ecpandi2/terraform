@@ -8,5 +8,6 @@ resource "aws_instance" "my-ec2-vm-new" {
   tags = {
     "Name" = "amz-linux-vm"
     "demotag" = "refreshtest"
+    "target" = "Target-Test-1"
   }
 }
