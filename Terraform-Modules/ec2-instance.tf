@@ -2,8 +2,8 @@ module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 4.0"
 
-  name = "Modules-Demo-Server"
-  instance_count         = 2
+  name = "Modules-Demo-Server-${each.key}"
+  for_each = toset(["one", "two"])
 
   ami                    = data.aws_ami.amzlinux.id
   instance_type          = "t2.micro"
