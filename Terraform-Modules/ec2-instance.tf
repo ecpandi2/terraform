@@ -14,7 +14,7 @@ module "ec2_instance" {
   user_data              = file("apache-install.sh")
 
   tags = {
-    Name        = "Modules-Demo-Server"
+    Name        = "Modules-Demo-Server-${each.key}"
     Terraform   = "true"
     Environment = "dev"
   }
